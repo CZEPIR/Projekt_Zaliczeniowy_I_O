@@ -56,6 +56,7 @@ public class Story {
             case "wskazówka": wskazówka();break;
             case "rozwidlenie": rozwidlenie();break;
             case "KoniecLasu": KoniecLasu();break;
+            case "KoniecLasu_Podwózka": KoniecLasu_Podwózka();break;
         }
     }
 
@@ -220,7 +221,7 @@ public class Story {
     public void klucze(){
 
         gs.image.setImageResource(R.drawable.keyring);
-        gs.text.setText("Gratulacje! W szafce znalazłeś klucze oraz nóż. \n\nCo robisz?");
+        gs.text.setText("Gratulacje! W szafce znalazłeś klucze, monety oraz nóż. \n\nCo robisz?");
 
         gs.button1.setText("Zawracam");
         gs.button2.setText("Idę dalej wzdłóż korytarza");
@@ -290,7 +291,7 @@ public class Story {
 
     public void LAS(){
 
-        gs.image.setImageResource(R.drawable.windowbars);
+        gs.image.setImageResource(R.drawable.forestentrance);
         gs.text.setText("Kiedy już opuściłeś mury więzienia, zdajesz sobie sprawę, że przed tobą rysuje się ogramony ciemny i mroczny las. \n\nCo robisz?");
 
         gs.button1.setText("Wchodzę w głąb lasu");
@@ -357,7 +358,7 @@ public class Story {
 
     public void śmierć_piwnica() {
 
-        gs.image.setImageResource(R.drawable.deadhead);
+        gs.image.setImageResource(R.drawable.musclefat);
         gs.text.setText("KONIEC GRY \n\n Przy drzwiach wejściowych zostajesz złapany przez wilkiego osiłka, który po kilku godzinach spędzonych w piwnicy, wydaje Cię strażnikom z więzienia...");
 
         gs.button1.setText("");
@@ -370,7 +371,7 @@ public class Story {
 
     public void śmierć_strażnica() {
 
-        gs.image.setImageResource(R.drawable.deadhead);
+        gs.image.setImageResource(R.drawable.guardedtower);
         gs.text.setText("KONIEC GRY \n\n Docierasz do strażnicy, gzie zostajesz rozpoznany i z powrotem trafiasz do więzienia...");
 
         gs.button1.setText("");
@@ -383,8 +384,8 @@ public class Story {
 
     public void strażnicy(){
 
-        gs.image.setImageResource(R.drawable.stonedskull);
-        gs.text.setText("Po przejściu kilkuset metrów słyszysz coraz głośniej, że zbliża się do ciebie grópa strażników razem z psami. \n\nCo robisz?");
+        gs.image.setImageResource(R.drawable.sniffingdog);
+        gs.text.setText("Po przejściu kilkuset metrów słyszysz coraz głośniej, że zbliża się do ciebie grupa strażników razem z psami. \n\nCo robisz?");
 
         gs.button1.setText("Wskakuję do małego stawu i nacieram się błotem w celu lepszego zakamuflowania się przed strażnikami i ich psami");
         gs.button2.setText("biegnę dale w las");
@@ -396,7 +397,7 @@ public class Story {
 
     public void Staw(){
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.swamp);
         gs.text.setText("Dobry wybór. Grupa poszukiwawcza Cię ominęła \n\nCo robisz?");
 
         gs.button1.setText("Wychodzisz i idziesz dalej w głąb lasu");
@@ -409,7 +410,7 @@ public class Story {
 
     public void ścieżka(){
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.trail);
         gs.text.setText("Wychodzisz ze stawu i widzisz scieżkę. \n\nCo robisz?");
 
         gs.button1.setText("Podążasz jej szlakiem");
@@ -422,7 +423,7 @@ public class Story {
 
     public void głębia(){
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.forest);
         gs.text.setText("Wszedłeś tak głęboko w las, że nie masz kompletnie pojęcia gdzie jesteś. \n\nCo robisz?");
 
         gs.button1.setText("Wracam się do ścieżki");
@@ -435,7 +436,7 @@ public class Story {
 
     public void obozowisko(){
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.forestcamp);
         gs.text.setText("Po kilkunastu kilometrach leśnej ścieżki widzisz w oddali nieduże obozowisko a przy nim kilka mężczyzn \n\nCo robisz?");
 
         gs.button1.setText("Podchodzę");
@@ -448,20 +449,20 @@ public class Story {
 
     public void spotkanie(){
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.confrontation);
         gs.text.setText("Widzisz że mężczyzni nie nalężą do tych bardziej przyjaznych. \n\nCo robisz?");
 
         gs.button1.setText("Próbujesz ich przekonać do pomocy");
-        gs.button2.setText("Oferujesz im kilka złotych monet z twojej sakiewki(Jeśli masz)");
+        gs.button2.setText("Oferujesz im kilka złotych monet z twojej sakiewki(Jeśli masz) w zamian za pomoc.");
 
         nextPosition1 = "śmierć_las";
-        nextPosition2 = "KoniecLasu";
+        nextPosition2 = "KoniecLasu_Podwózka";
 
     }
 
     public void karczma() {
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.tavernsign);
         gs.text.setText("Po przejściu kolejnych kilku kilometrów natrafiasz na karczmę. \n\nCo robisz?");
 
         gs.button1.setText("idę dalej ścieżką");
@@ -473,11 +474,11 @@ public class Story {
 
     public void karczmarz() {
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.suspicious);
         gs.text.setText("Mężczyzna za ladą zorientował się że jesteś zbiegiem z więzienia, ale zgodził się ci pomóc za drobną przysługę. \n\nCo robisz?");
 
-        gs.button1.setText("Olewam go i wychodzę");
-        gs.button2.setText("Wręczam kilka monet(Jeśli masz)");
+        gs.button1.setText("Olewasz go i wychodzę");
+        gs.button2.setText("Wręczasz kilka monet(Jeśli masz)");
 
         nextPosition1 = "śmierć_piwnica";
         nextPosition2 = "wskazówka";
@@ -485,7 +486,7 @@ public class Story {
 
     public void wskazówka() {
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.sideswipe);
         gs.text.setText("Dowiadujesz się, że na rozwidleniu, aby dotrzeć do miasta, musisz skręcić w lewo. \n\nCo robisz?");
 
         gs.button1.setText("");
@@ -498,7 +499,7 @@ public class Story {
 
     public void rozwidlenie() {
 
-        gs.image.setImageResource(R.drawable.stonedskull);
+        gs.image.setImageResource(R.drawable.crossroad);
         gs.text.setText("Natrafiasz na rozwidlenie. \n\nCo robisz?");
 
         gs.button1.setText("Ide w lewo");
@@ -510,8 +511,21 @@ public class Story {
 
     public void KoniecLasu() {
 
-        gs.image.setImageResource(R.drawable.evasion);
+        gs.image.setImageResource(R.drawable.medievalgate);
         gs.text.setText("Gratulacje! Udało Ci się wydostać z lasu. Przed twoimi oczami rysują się ogromne mury wielkiego i nowoczesnego miasta... \n\nCDN...?");
+
+        gs.button1.setText("");
+        gs.button1.setVisibility(View.INVISIBLE);
+        gs.button2.setText("Zagraj jeszcze raz!");
+
+        nextPosition1 = "";
+        nextPosition2 = "StartingPoint";
+    }
+
+    public void KoniecLasu_Podwózka() {
+
+        gs.image.setImageResource(R.drawable.medievalgate);
+        gs.text.setText("Gratulacje! Udało Ci się wydostać z lasu. Mężczyźni podwożą cię od razu poza puszczę. Przed twoimi oczami rysują się ogromne mury wielkiego i nowoczesnego miasta... \n\nCDN...?");
 
         gs.button1.setText("");
         gs.button1.setVisibility(View.INVISIBLE);
